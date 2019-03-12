@@ -1,0 +1,26 @@
+<div class="container">
+
+<div class="pages-title">
+  <h2> <%= @task.title %> </h2>
+</div>
+
+<div>
+  <h3> <%= @task.details %> </h3>
+</div>
+
+<div>
+  <input type="checkbox" id="tasks-checkbox" name="tasks" checked>
+  <p> This task is completed yet <% @task.completed %> </p>
+</div>
+
+<div>
+  <%= link_to tasks_path, class: "btn btn-primary" do %>
+    <i class="fas fa-caret-square-left"></i>
+    back to <strong>all</strong> tasks
+    <% end %>
+</div>
+
+<div class="badge badge-warning">
+<%= link_to 'Edit your task', edit_task_path %>
+</div>
+</div>

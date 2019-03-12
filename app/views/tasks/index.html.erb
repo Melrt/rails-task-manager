@@ -1,0 +1,25 @@
+<div class="container">
+
+<div  class="pages-title">
+<h1>My Tasks</h1>
+</div>
+
+<% @tasks.each do |task| %>
+<div class="card">
+<div class="card-body">
+<div class="checking-task">
+<input type="checkbox" name="check-box">
+</div>
+<div class="title-delete">
+<p> <%= link_to task.title, task_path(task) %> . <%= link_to 'delete', task_path(task), method: :delete, data: { confirm: "Es-tu sur de vouloir supprimer cette tache ?" } %> </p> <br>
+</div>
+</div>
+</div>
+<% end %>
+
+<div class="text-center">
+<div class="badge badge-warning">
+  <%= link_to 'Add a new task', tasks_new_path %>
+</div>
+</div>
+</div>

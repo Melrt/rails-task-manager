@@ -1,0 +1,24 @@
+<div class="container">
+
+  <div class="pages-title">
+    <h1>Create a new task !</h1>
+    </div>
+
+
+<%= form_for(@task) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+
+  <%= f.label :completed %>
+  <%= f.text_field :completed %>
+
+  <%= f.submit %>
+<% end %>
+
+<div class="badge badge-warning">
+<%= link_to 'Cancel', tasks_path %>
+</div>
+</div>
