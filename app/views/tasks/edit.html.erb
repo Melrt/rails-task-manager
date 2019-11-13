@@ -1,8 +1,5 @@
-<div class="container">
+<h1>Edit Task</h1>
 
-  <div class="pages-title">
-    <h1>Edit Task</h1>
- </div>
 
 <%= form_for(@task) do |f| %>
   <%= f.label :title %>
@@ -12,12 +9,13 @@
   <%= f.text_field :details %>
 
   <%= f.label :completed %>
-  <%= f.text_field :completed %>
+  <%= f.check_box :completed %>
+
 
   <%= f.submit %>
 <% end %>
 
-<div class="badge badge-warning">
-<%= link_to 'Update Task', tasks_path %>
-</div>
-</div>
+<%= link_to "cancel", task_path(@task) %>
+
+
+
